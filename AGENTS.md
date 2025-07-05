@@ -16,13 +16,13 @@
 - Node dependencies for the frontend are installed with `npm install` inside `frontend/`.
 
 ## Linting and Tests
-- Run the backend linter with:
+- From `backend/` run the backend linter with:
 
   ```bash
   uv run bash scripts/lint.sh
   ```
 
-- Run backend tests with coverage using:
+- From `backend/` run backend tests with coverage using:
 
   ```bash
   uv run bash scripts/tests-start.sh
