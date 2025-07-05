@@ -50,3 +50,8 @@
 - Follow the title format: `[<project_name>] <Title>`.
 - Ensure `pre-commit`, lints and tests pass before opening a PR.
 - Update or add tests for any changed code.
+
+## Commit Signing
+- All contributors must sign their commits. Use `git commit -S` to add a verified signature.
+- Consider enabling automatic commit signing in your Git configuration.
+- For more details, see GitHub's signing guide: https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits
