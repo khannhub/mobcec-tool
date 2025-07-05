@@ -1,0 +1,52 @@
+# Contributor Guide
+
+## Repository Overview
+- **backend/**: FastAPI backend application with SQLModel and other dependencies.
+- **frontend/**: React frontend built with Vite and TypeScript.
+- Docker compose files at the repo root start the full stack for local development.
+
+## Development Workflow
+- Python dependencies are managed with **uv**. From `backend/` run:
+
+  ```bash
+  uv sync
+  ```
+
+- Activate the virtual environment at `backend/.venv` when running backend commands.
+- Node dependencies for the frontend are installed with `npm install` inside `frontend/`.
+
+## Linting and Tests
+- Run the backend linter with:
+
+  ```bash
+  uv run bash scripts/lint.sh
+  ```
+
+- Run backend tests with coverage using:
+
+  ```bash
+  uv run bash scripts/tests-start.sh
+  ```
+
+- Frontend end-to-end tests use Playwright. With Docker Compose running, execute:
+
+  ```bash
+  npx playwright test
+  ```
+
+- Install and configure **pre-commit** hooks to automatically format code before commits:
+
+  ```bash
+  uv run pre-commit install
+  ```
+
+  To run on all files:
+
+  ```bash
+  uv run pre-commit run --all-files
+  ```
+
+## Pull Request Instructions
+- Follow the title format: `[<project_name>] <Title>`.
+- Ensure `pre-commit`, lints and tests pass before opening a PR.
+- Update or add tests for any changed code.
