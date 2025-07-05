@@ -34,9 +34,10 @@
   npx playwright test
   ```
 
-- Install and configure **pre-commit** hooks to automatically format code before commits:
+ - Install and configure **pre-commit** hooks to automatically format code before commits. Run `uv sync` inside `backend/` so that the virtual environment and `pre-commit` executable are created at `backend/.venv/bin/`:
 
   ```bash
+  uv sync
   uv run pre-commit install
   ```
 
