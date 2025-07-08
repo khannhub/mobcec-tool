@@ -72,7 +72,7 @@ fastapi dev app/main.py
 
 When you start the Docker Compose stack, it uses `localhost` by default, with different ports for each service (backend, frontend, adminer, etc).
 
-When you deploy it to production (or staging), it will deploy each service in a different subdomain, like `api.example.com` for the backend and `dashboard.example.com` for the frontend.
+When you deploy it to production (or staging), the example configuration uses a single domain with path based routing. The frontend and API are available at `https://tools.mobcec.com` and `https://tools.mobcec.com/api/v1` respectively.
 
 In the guide about [deployment](deployment.md) you can read about Traefik, the configured proxy. That's the component in charge of transmitting traffic to each service based on the subdomain.
 
@@ -84,7 +84,7 @@ DOMAIN=localhost.tiangolo.com
 
 That will be used by the Docker Compose files to configure the base domain for the services.
 
-Traefik will use this to transmit traffic at `api.localhost.tiangolo.com` to the backend, and traffic at `dashboard.localhost.tiangolo.com` to the frontend.
+Traefik will use this to transmit traffic at `api.localhost.tiangolo.com` to the backend and `dashboard.localhost.tiangolo.com` to the frontend.
 
 The domain `localhost.tiangolo.com` is a special domain that is configured (with all its subdomains) to point to `127.0.0.1`. This way you can use that for your local development.
 
@@ -205,3 +205,13 @@ Adminer: http://localhost.tiangolo.com:8080
 Traefik UI: http://localhost.tiangolo.com:8090
 
 MailCatcher: http://localhost.tiangolo.com:1080
+
+### Production example
+
+With the sample production configuration, you would access the services at:
+
+Frontend: https://tools.mobcec.com
+
+Backend: https://tools.mobcec.com/api/v1
+
+Automatic Interactive Docs (Swagger UI): https://tools.mobcec.com/api/v1/docs

@@ -128,7 +128,7 @@ git merge --continue
 
 ### Configure
 
-You can then update configs in the `.env` files to customize your configurations.
+You can then update configs in the `.env` files to customize your configurations. The provided `.env.example` contains defaults for local development and commented examples for a production deployment using `tools.mobcec.com`.
 
 Before deploying it, make sure you change at least the values for:
 
